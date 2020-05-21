@@ -100,4 +100,4 @@ for scorer_info in soup.find_all('div', class_= 'top-player-stats__body'):
 
     count += 1
 
-#### START HERE: Update script to 1) visualise the data ####
+#### START HERE: Update script to 1) visualise the data (by teams and other interesting info) using TKinter. Assign actions (such as reseting the database) to buttons. ####
