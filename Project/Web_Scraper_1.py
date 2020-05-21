@@ -10,7 +10,7 @@ def text_to_percentage(text):
     return percentage
 
 # Create database and initialise table
-conn = sqlite3.connect('C:\\Users\\go_ac\\Documents\\Files From Old Laptop\\Further learning\\IT\Languages\\Python\\Python files\\Ad-hoc\\Random scripts\\Databases\\Football_Stats.sqlite')
+conn = sqlite3.connect('C:\\Users\go_ac\\Documents\\Files From Old Laptop\\Further learning\\IT\\General\\Code\\Projects\\Web_Scraper_1\Project\Database\\Football_Stats.sqlite')
 cur = conn.cursor()
 
 # Check if the tables in the database should be reset.
