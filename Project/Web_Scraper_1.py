@@ -3,15 +3,24 @@ from bs4 import BeautifulSoup
 import requests
 import sqlite3
 
+# Create database and initialise table
+conn = sqlite3.connect('C:\\Users\go_ac\\Documents\\Files From Old Laptop\\Further learning\\IT\\General\\Code\\Projects\\Web_Scraper_1\Project\Database\\Football_Stats.sqlite')
+cur = conn.cursor()
+
+# Create TKinter window
+#### ???? ####
+
+
+
+
+#### Define helper functions ####
+
 # Convert string %'s to decimals
 def text_to_percentage(text):
     text_length = len(text)-1
     percentage = float(text[:text_length])/100
     return percentage
 
-# Create database and initialise table
-conn = sqlite3.connect('C:\\Users\go_ac\\Documents\\Files From Old Laptop\\Further learning\\IT\\General\\Code\\Projects\\Web_Scraper_1\Project\Database\\Football_Stats.sqlite')
-cur = conn.cursor()
 
 # Check if the tables in the database should be reset.
 while True:
@@ -101,3 +110,10 @@ for scorer_info in soup.find_all('div', class_= 'top-player-stats__body'):
     count += 1
 
 #### START HERE: Update script to 1) visualise the data (by teams and other interesting info) using TKinter. Assign actions (such as reseting the database) to buttons. ####
+
+#### STEPS OF GUI: 1) Add a reset database button. ####
+#### 2) text entry boxes promption the team name and the number of scorers to add to the database (write a 'update database' function and a submit button to initiate it. ####
+#### 3) Print the added entries within a textbox with a 'clear_textbox' function timed to automatically clear the box after say 10 seconds. ####
+#### 4) Create another window where can retrieve interesting information from the top scorers database (such as: 1) a summary of the teams, goals, assists and number of scorers in the databse, 2) The top scorer(s)/assisters in the database, 3) average goals/assists per person for each team in the database, 4) A weighted score for each team (ranked and sorted).  ####
+#### 5) Create a button to run each of the 4 stats (and put their code inside functions and call when the button is clicked). Print detailed results to a textbox, with a label used to show the top ranked one (include a picture with a gold trophy beside it.)  ####
+#### 6) Include a button to switch between the 2 views (database addition and printed stats)  ####
