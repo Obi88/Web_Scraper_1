@@ -104,6 +104,7 @@ def team_data(team_name, no_of_players, connection, cursor_object, print_info = 
 
 
 ###### START HERE: Update script to 1) Add output functions (SQL queries); 2) Visualise the data using these output functions and TKinter. Assign actions (such as reseting the database) to buttons. ######
+# For step 1, print the results into the section run as main below.
 
 
 
@@ -118,7 +119,16 @@ def team_data(team_name, no_of_players, connection, cursor_object, print_info = 
 # A weighted score for each team (ranked and sorted).
 
 
-###### This section is executed only if the module is being ran directly (as opposed to functions being imported for use in another program) ######
+
+#### STEPS OF GUI: 1) Add a reset database button. ####
+#### 2) text entry boxes promption the team name and the number of scorers to add to the database (write a 'update database' function and a submit button to initiate it. ####
+#### 3) Print the added entries within a textbox with a 'clear_textbox' function timed to automatically clear the box after say 10 seconds. ####
+#### 4) Create another window where can retrieve interesting information from the top scorers database [such as: 1) a summary of the teams, goals, assists and number of scorers in the database, 2) The top scorer(s)/assisters in the database, 3) average goals/assists per person for each team in the database, 4) A weighted score for each team (ranked and sorted)].  ####
+#### 5) Create a button to run each of the 4 stats (and put their code inside functions and call when the button is clicked). Print detailed results to a textbox, with a label used to show the top ranked one (include a picture with a gold trophy beside it.)  ####
+#### 6) Include a button to switch between the 2 views (database addition and printed stats)  ####
+
+
+###### ++++++ This section is executed only if the module is being ran directly (as opposed to functions being imported for use in another program) ++++++ ######
 
 if __name__ == '__main__':
 
@@ -167,11 +177,3 @@ if __name__ == '__main__':
     # Run the main program.
     for team, no_of_players in search_list:
         team_data(team, no_of_players, conn, cur, print_info)
-
-
-#### STEPS OF GUI: 1) Add a reset database button. ####
-#### 2) text entry boxes promption the team name and the number of scorers to add to the database (write a 'update database' function and a submit button to initiate it. ####
-#### 3) Print the added entries within a textbox with a 'clear_textbox' function timed to automatically clear the box after say 10 seconds. ####
-#### 4) Create another window where can retrieve interesting information from the top scorers database [such as: 1) a summary of the teams, goals, assists and number of scorers in the database, 2) The top scorer(s)/assisters in the database, 3) average goals/assists per person for each team in the database, 4) A weighted score for each team (ranked and sorted)].  ####
-#### 5) Create a button to run each of the 4 stats (and put their code inside functions and call when the button is clicked). Print detailed results to a textbox, with a label used to show the top ranked one (include a picture with a gold trophy beside it.)  ####
-#### 6) Include a button to switch between the 2 views (database addition and printed stats)  ####
